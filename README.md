@@ -10,6 +10,6 @@ Both abstracts are inspired by my keynote talk about rOpenSci onboarding at satR
 
 This would hopefully be a lightning talk about taking screenshots for slides using `webshot` and `magick`. [Source](webshot_lightning.Rmd), [Pdf](webshot_lightning.pdf).
 
-## 
+## Notre système de revue de paquets en revue : présenter et analyser rOpenSci onboarding
 
 This would hopefully be a regular talk about rOpenSci onboarding (topical topic ahah) and about analyzing git and GitHub data with R (technical topic). [Source](git_github_regular.Rmd), [Pdf](git_github_regular.pdf).
