@@ -1,6 +1,6 @@
 # rr2018
 
-Abstracts I'll submit to the French R conference.
+Abstracts I've submitted to the French R conference.
 
 I am on the program committee but obviously I won't review my own submissions :grin:
 

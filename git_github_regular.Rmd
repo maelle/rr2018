@@ -19,7 +19,7 @@ Dans cet oral, ce système sera présenté. Des analyses des revues seront prés
 
 ## Références
 
-[1] PLACEHOLDER
+[1] Karthik Ram, Noam Ross, Scott Chamberlain (2017). Lightning talk: A model for peer review and onboarding research software. 4th Workshop on Sustainable Software for Science: Practice and Experiences (WSSSPE4). https://pdfs.semanticscholar.org/0d9b/e20b0a51f1ad6b92bf7eb430240217de32c1.pdf
 
 [2] Scott Chamberlain (2018). ghql: General Purpose GraphQL Client. R package
   version 0.0.4.9210. https://github.com/ropensci/ghql
