@@ -10,6 +10,8 @@ Both abstracts are inspired by my keynote talk about rOpenSci onboarding at satR
 
 This will be a poster about taking screenshots for slides using `webshot` and `magick`. Abstract: [Source](abstracts/webshot_lightning.Rmd), [Pdf](abstracts/webshot_lightning.pdf).
 
+Poster to be prepared with [`drposter`](https://github.com/bbucior/drposter) found via [this list of templates for creating posters in R Markdown ](https://gist.github.com/Pakillo/4854e5d760351206084f6be8abe476b2)
+
 ## Notre système de revue de paquets en revue : présenter et analyser rOpenSci onboarding
 
 This will be a regular talk about rOpenSci onboarding and about analyzing git and GitHub data with R. Abstract: [Source](abstracts/git_github_regular.Rmd), [Pdf](abstracts/git_github_regular.pdf).

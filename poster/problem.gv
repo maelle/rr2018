@@ -1,0 +1,10 @@
+digraph {
+  rankdir="LR"
+
+  // square brackets hold attributes
+  A [ label="Votre beau site\n Votre fantastique app\n &#8984;" shape="box" fontsize = "12" fontname = "Roboto"]
+  B [ label="Les yeux de votre public\n &#9786;&#9786;" fontsize = "12" fontname = "Roboto" shape = "egg"]
+
+  // edges have attributes too
+  A -> B [ label = "  ?  " fontsize = "15" fontname = "Roboto"]
+}
