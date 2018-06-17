@@ -9,6 +9,6 @@ digraph {
 
   // edges
   A -> B [ label = "Touche imprime-écran\n Ou extension Chrome\n Rognage à la main" fontsize = "4" fontname = "Roboto" arrowsize=.5, weight=.2]
-  B -> C [ label = "Copie-collage" fontsize = "4" fontname = "Roboto"arrowsize=.5, weight=2.]
+  B -> C [ label = "Copie-collagen &#9112;" fontsize = "4" fontname = "Roboto"arrowsize=.5, weight=2.]
   C -> D [ label = "" fontsize = "4" fontname = "Roboto"arrowsize=.5, weight=2.]
 }

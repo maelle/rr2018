@@ -1,7 +1,7 @@
 ---
 title: "Capturez votre écran depuis `r icon::fa('r')` !"
 subtitle: "Comment exposer votre outil ?"
-author: "Maëlle Salmon, rOpenSci <br/> `r icon::fa('twitter')` ma_salmon `r icon::fa('github')` maelle `r icon::fa('globe')` masalmon.eu"
+author: "Maëlle Salmon, rOpenSci <br/>`r icon::fa('twitter')` ma_salmon `r icon::fa('github')` maelle `r icon::fa('globe')` masalmon.eu"
 output:
   drposter::drposter_poster:
     self_contained: false
@@ -21,7 +21,7 @@ DiagrammeR::grViz("problem.gv")
 ## Approche 1: à la main 
 
 ```{r, echo = FALSE}
-DiagrammeR::grViz("approach1.gv")
+DiagrammeR::grViz("approach1.gv", width = 336)
 ```
 
 
@@ -29,24 +29,44 @@ DiagrammeR::grViz("approach1.gv")
 
 <font size="10">`r icon::fa('hand-scissors')` Et à chaque changement de l'outil... on recommence tout ! `r icon::fa('meh')`</font>
 
+# {.col-2}
 
 ## Approche 2: avec R
 
-`r icon::fa('r')`
+```{r, echo = FALSE}
+DiagrammeR::grViz("approach2.gv")
+```
 
-BLABLA
+<br/>
+
+<font size="10">`r icon::fa('r')` Et à chaque changement de l'outil... on re-tricote ("knit") ! `r icon::fa('smile')`</font>
 
 # {.col-1}
 
-## Outils de captures
+## Outils de captures d'écran
+<font size="10">
+Il faut un __webdriver__ et un __webdriver client__: PhantomJS via `webshot`, Selenium via `RSelenium`/`seleniumPipes`... le __paquet `webdriver`__ est l'interface du futur ! (https://github.com/rstudio/webdriver)
 
-BLABLA
+`webshot` &co permettent l'**interaction** avec ou sans JavaScript.
+Pour bien viser une partie de l'écran, capture d'__éléments CSS__, ou alors __rognage et autres manipulations d'image via `magick`__ (https://github.com/ropensci/magick).
+
+</font>
 
 ## Conclusion
 
-- On peut tout faire avec R !
-- Oui il faut écrire du code mais ça a ses avantages: Reproducibilité, apprentissage de nouveaux outils (CSS, `magick`...).
+- <font size="10">On peut tout faire avec R !</font>
+- <font size="10">Oui il faut écrire du code mais ça a ses avantages: __reproducibilité, apprentissage de nouveaux outils__ (CSS, `magick`...).</font>
+- <font size="10">Les captures d'écran peuvent faire partie de tests (cf `shinytest` de RStudio).</font>
 
-## Réferences
+## Méta-info
 
-* Ce poster a été réalisé avec `drposter` de Ben Bucior (https://github.com/bbucior/drposter). Les diagrammes sont faits en `GraphViz` utilisé via le paquet `DiagrammeR` de Richard Iannone (http://rich-iannone.github.io/DiagrammeR/).
+```{r, echo = FALSE}
+library("magrittr")
+magick::image_read("images/logo.png") 
+```
+
+
+- <font size="10">Ce poster a été réalisé avec `R Markdown`, et `drposter` de Ben Bucior (https://github.com/bbucior/drposter). </font>
+- <font size="10">Icônes FontAwesome v5.0.13 fontawesome.com, importées avec le paquet `icon` (https://github.com/ropenscilabs/icon).</font>
+- <font size="10">Les diagrammes sont faits en `GraphViz` utilisé via le paquet `DiagrammeR` de Richard Iannone (http://rich-iannone.github.io/DiagrammeR/).</font>
+- <font size="10">rOpenSci (https://ropensci.org) est une organisation pour la science ouverte et reproductible avec R. Jetez un oeil à tous nos paquets dont `magick` via https://ropensci.org/packages !</font>

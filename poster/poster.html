@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <meta name="author" content="Maëlle Salmon, rOpenSci   <i class="fab  fa-twitter "></i> ma_salmon <i class="fab  fa-github "></i> maelle <i class="fas  fa-globe "></i> masalmon.eu" />
+  <meta name="author" content="Maëlle Salmon, rOpenSci  <i class="fab  fa-twitter "></i> ma_salmon <i class="fab  fa-github "></i> maelle <i class="fas  fa-globe "></i> masalmon.eu" />
   <title>Capturez votre écran depuis <i class="fab  fa-r "></i> !</title>
     <style type="text/css">code{white-space: pre;}</style>
     <link rel="stylesheet" href="drposter_files//drposter.css" />
@@ -20,49 +20,61 @@
 <header>
     <h1 class="title">Capturez votre écran depuis <i class="fab  fa-r "></i> !</h1>
   <h1 class="subtitle">Comment exposer votre outil ?</h1>
-    <h2 class="author">Maëlle Salmon, rOpenSci <br/> <i class="fab  fa-twitter "></i> ma_salmon <i class="fab  fa-github "></i> maelle <i class="fas  fa-globe "></i> masalmon.eu</h2>
+    <h2 class="author">Maëlle Salmon, rOpenSci <br/><i class="fab  fa-twitter "></i> ma_salmon <i class="fab  fa-github "></i> maelle <i class="fas  fa-globe "></i> masalmon.eu</h2>
 </header>
 
 <div id="section" class="section level1 col-1">
 <h1></h1>
 <div id="le-defi" class="section level2">
 <h2>Le défi</h2>
-<div id="htmlwidget-4efdfc790fdd7fe8c8af" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-4efdfc790fdd7fe8c8af">{"x":{"diagram":"digraph {\n  rankdir=\"LR\"\n\n  // nodes\n  A [ label=\"Votre beau site\\n Votre fantastique app\" shape=\"hexagon\" fontsize = \"9\" fontname = \"Roboto\"]\n  B [ label=\"Les yeux de votre public\\n &#9786;&#9786;&#9786;&#9786;&#9786;&#9786;&#9786;\" fontsize = \"9\" fontname = \"Roboto\" shape = \"egg\"]\n\n  // edge\n  A -> B [ label = \"?\" fontsize = \"9\" fontname = \"Roboto\" style = \"dashed\"]\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-6a860d0ce3f8da229294" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6a860d0ce3f8da229294">{"x":{"diagram":"digraph {\n  rankdir=\"LR\"\n\n  // nodes\n  A [ label=\"Votre beau site\\n Votre fantastique app\" shape=\"hexagon\" fontsize = \"9\" fontname = \"Roboto\"]\n  B [ label=\"Les yeux de votre public\\n &#9786;&#9786;&#9786;&#9786;&#9786;&#9786;&#9786;\" fontsize = \"9\" fontname = \"Roboto\" shape = \"egg\"]\n\n  // edge\n  A -> B [ label = \"?\" fontsize = \"9\" fontname = \"Roboto\" style = \"dashed\"]\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <div id="section-1" class="section level1 col-2">
 <h1></h1>
 <div id="approche-1-a-la-main" class="section level2">
 <h2>Approche 1: à la main</h2>
-<div id="htmlwidget-111a22e8862ea865efde" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-111a22e8862ea865efde">{"x":{"diagram":"digraph {\n  rankdir=\"TB\"\n\n  // nodes\n  A [ label=\"Votre beau site\\n Votre fantastique app\" shape=\"hexagon\" fontsize = \"4\" fontname = \"Roboto\" height = \"0.3\" width = \"0.7\" fixedsize = \"true\"]\n  B [ label=\"Une image\" shape=\"egg\" fontsize = \"4\" fontname = \"Roboto\" height = \"0.2\" width = \"0.4\" fixedsize = \"true\"]\n  C [ label=\"Les diapos\" shape=\"egg\" fontsize = \"4\" fontname = \"Roboto\" height = \"0.2\"  width = \"0.5\" fixedsize = \"true\"]\n  D [ label=\"&#9786;&#9786;&#9786;&#9786;&#9786;&#9786;&#9786;\" fontsize = \"4\" fontname = \"Roboto\" shape = \"egg\" height = \"0.2\" width = \"0.5\" fixedsize = \"true\"]\n\n  // edges\n  A -> B [ label = \"Touche imprime-écran\\n Ou extension Chrome\\n Rognage à la main\" fontsize = \"4\" fontname = \"Roboto\" arrowsize=.5, weight=.2]\n  B -> C [ label = \"Copie-collage\" fontsize = \"4\" fontname = \"Roboto\"arrowsize=.5, weight=2.]\n  C -> D [ label = \"\" fontsize = \"4\" fontname = \"Roboto\"arrowsize=.5, weight=2.]\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-68d767fd2790928794c6" style="width:336px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-68d767fd2790928794c6">{"x":{"diagram":"digraph {\n  rankdir=\"TB\"\n\n  // nodes\n  A [ label=\"Votre beau site\\n Votre fantastique app\" shape=\"hexagon\" fontsize = \"4\" fontname = \"Roboto\" height = \"0.3\" width = \"0.7\" fixedsize = \"true\"]\n  B [ label=\"Une image\" shape=\"egg\" fontsize = \"4\" fontname = \"Roboto\" height = \"0.2\" width = \"0.4\" fixedsize = \"true\"]\n  C [ label=\"Les diapos\" shape=\"egg\" fontsize = \"4\" fontname = \"Roboto\" height = \"0.2\"  width = \"0.5\" fixedsize = \"true\"]\n  D [ label=\"&#9786;&#9786;&#9786;&#9786;&#9786;&#9786;&#9786;\" fontsize = \"4\" fontname = \"Roboto\" shape = \"egg\" height = \"0.2\" width = \"0.5\" fixedsize = \"true\"]\n\n  // edges\n  A -> B [ label = \"Touche imprime-écran\\n Ou extension Chrome\\n Rognage à la main\" fontsize = \"4\" fontname = \"Roboto\" arrowsize=.5, weight=.2]\n  B -> C [ label = \"Copie-collagen &#9112;\" fontsize = \"4\" fontname = \"Roboto\"arrowsize=.5, weight=2.]\n  C -> D [ label = \"\" fontsize = \"4\" fontname = \"Roboto\"arrowsize=.5, weight=2.]\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p><br/></p>
 <p><font size="10"><i class="fas  fa-hand-scissors "></i> Et à chaque changement de l’outil… on recommence tout ! <i class="fas  fa-meh "></i></font></p>
 </div>
+</div>
+<div id="section-2" class="section level1 col-2">
+<h1></h1>
 <div id="approche-2-avec-r" class="section level2">
 <h2>Approche 2: avec R</h2>
-<i class="fab  fa-r "></i>
-<p>BLABLA</p>
+<div id="htmlwidget-cdb85f7bb783224c5148" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-cdb85f7bb783224c5148">{"x":{"diagram":"approach2.gv","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<p><br/></p>
+<p><font size="10"><i class="fab  fa-r "></i> Et à chaque changement de l’outil… on re-tricote (“knit”) ! <i class="fas  fa-smile "></i></font></p>
 </div>
 </div>
-<div id="section-2" class="section level1 col-1">
+<div id="section-3" class="section level1 col-1">
 <h1></h1>
-<div id="outils-de-captures" class="section level2">
-<h2>Outils de captures</h2>
-<p>BLABLA</p>
+<div id="outils-de-captures-decran" class="section level2">
+<h2>Outils de captures d’écran</h2>
+<p><font size="10"> Il faut un <strong>webdriver</strong> et un <strong>webdriver client</strong>: PhantomJS via <code>webshot</code>, Selenium via <code>RSelenium</code>/<code>seleniumPipes</code>… le <strong>paquet <code>webdriver</code></strong> est l’interface du futur ! (<a href="https://github.com/rstudio/webdriver" class="uri">https://github.com/rstudio/webdriver</a>)</p>
+<p><code>webshot</code> &amp;co permettent l’<strong>interaction</strong> avec ou sans JavaScript. Pour bien viser une partie de l’écran, capture d’<strong>éléments CSS</strong>, ou alors <strong>rognage et autres manipulations d’image via <code>magick</code></strong> (<a href="https://github.com/ropensci/magick" class="uri">https://github.com/ropensci/magick</a>).</p>
+<p></font></p>
 </div>
 <div id="conclusion" class="section level2">
 <h2>Conclusion</h2>
 <ul>
-<li>On peut tout faire avec R !</li>
-<li>Oui il faut écrire du code mais ça a ses avantages: Reproducibilité, apprentissage de nouveaux outils (CSS, <code>magick</code>…).</li>
+<li><font size="10">On peut tout faire avec R !</font></li>
+<li><font size="10">Oui il faut écrire du code mais ça a ses avantages: <strong>Reproducibilité, apprentissage de nouveaux outils</strong> (CSS, <code>magick</code>…).</font></li>
+<li><font size="10">Les captures d’écran peuvent faire partie de tests (cf <code>shinytest</code> de RStudio).</font></li>
 </ul>
 </div>
-<div id="references" class="section level2">
-<h2>Réferences</h2>
+<div id="meta-info" class="section level2">
+<h2>Méta-info</h2>
+<p><img src="poster_files/figure-html/unnamed-chunk-4-1.png" width="946" /></p>
 <ul>
-<li>Ce poster a été réalisé avec <code>drposter</code> de Ben Bucior (<a href="https://github.com/bbucior/drposter" class="uri">https://github.com/bbucior/drposter</a>). Les diagrammes sont faits en <code>GraphViz</code> utilisé via le paquet <code>DiagrammeR</code> de Richard Iannone (<a href="http://rich-iannone.github.io/DiagrammeR/" class="uri">http://rich-iannone.github.io/DiagrammeR/</a>).</li>
+<li><font size="10">Ce poster a été réalisé avec <code>R Markdown</code>, et <code>drposter</code> de Ben Bucior (<a href="https://github.com/bbucior/drposter" class="uri">https://github.com/bbucior/drposter</a>). </font></li>
+<li><font size="10">Icônes FontAwesome v5.0.13 fontawesome.com, importées avec le paquet <code>icon</code> (<a href="https://github.com/ropenscilabs/icon" class="uri">https://github.com/ropenscilabs/icon</a>).</font></li>
+<li><font size="10">Les diagrammes sont faits en <code>GraphViz</code> utilisé via le paquet <code>DiagrammeR</code> de Richard Iannone (<a href="http://rich-iannone.github.io/DiagrammeR/" class="uri">http://rich-iannone.github.io/DiagrammeR/</a>).</font></li>
+<li><font size="10">rOpenSci (<a href="https://ropensci.org" class="uri">https://ropensci.org</a>) est une organisation pour la science ouverte et reproductible avec R. Jetez un oeil à tous nos paquets dont <code>magick</code> via <a href="https://ropensci.org/packages" class="uri">https://ropensci.org/packages</a> !</font></li>
 </ul>
 </div>
 </div>

@@ -65,12 +65,6 @@ pre {
 	min-width: 0;  /* Fixes a flexbox incompatibility for pre, per recommendation from http://stackoverflow.com/questions/32035406/how-to-limit-pre-tag-width-inside-flex-container */
 }
 
-img {
-	width: 100%;  /* Make it fit inside the 2-column, etc, flexbox */
-	height: auto;
-	background-color: white;  /* Eliminate transparency for consistency among all images with non-white backgrounds */
-}
-
 .level2 h2, .level2 h3 {
 	flex: 100%;
 }
