@@ -1,7 +1,6 @@
 ---
 title: "Capturez votre écran depuis `r icon::fa('r')` !"
-subtitle: "Comment exposer votre outil ?"
-author: "Maëlle Salmon, rOpenSci <br/>`r icon::fa('twitter')` ma_salmon `r icon::fa('github')` maelle `r icon::fa('globe')` masalmon.eu"
+subtitle: "Maëlle Salmon, rOpenSci <br/> `r icon::fa('twitter')` ma_salmon `r icon::fa('github')` maelle `r icon::fa('globe')` masalmon.eu `r icon::fa('envelope')` maelle.salmon @yahoo.se"
 output:
   drposter::drposter_poster:
     self_contained: false
@@ -58,7 +57,7 @@ Pour bien viser une partie de l'écran, capture d'__éléments CSS__, ou alors _
 - <font size="10">Oui il faut écrire du code mais ça a ses avantages: __reproducibilité, apprentissage de nouveaux outils__ (CSS, `magick`...).</font>
 - <font size="10">Les captures d'écran peuvent faire partie de tests (cf `shinytest` de RStudio).</font>
 
-## Méta-info
+## Méta-infos
 
 ```{r, echo = FALSE}
 library("magrittr")
