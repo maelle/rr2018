@@ -1,11 +1,12 @@
 digraph {
   rankdir="TB"
+
   // nodes
   A [ label="Votre beau site\n Votre fantastique app" shape="hexagon" fontsize = "9" fontname = "Roboto" height = "0.5" width = "1.7" fixedsize = "true"]
   B [ label="Les diapos" shape="egg" fontsize = "9" fontname = "Roboto" height = "0.3"  width = "1" fixedsize = "true"]
   C [ label="&#9786;&#9786;&#9786;&#9786;&#9786;&#9786;&#9786;" fontsize = "9" fontname = "Roboto" shape = "egg" height = "0.2" width = "1" fixedsize = "true"]
 
   // edges
-  A -> B [ label = "   webshot ou webdriver\n + magick\n + R Markdown" fontsize = "9" fontname = "Roboto" arrowsize=.5, weight=.2]
+  A -> B [ label = "    webshot/webdriver\n    + magick\n + R Markdown" fontsize = "9" fontname = "Roboto" arrowsize=.5, weight=.2]
   B -> C [ label = "" fontsize = "9" fontname = "Roboto"arrowsize=.5, weight=2.]
 }

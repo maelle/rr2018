@@ -20,9 +20,9 @@ DiagrammeR::grViz("problem.gv")
 ## Approche 1: à la main 
 
 ```{r, echo = FALSE}
-DiagrammeR::grViz("approach1.gv", width = 336)
+source("make_gvs.R")
 ```
-
+<img src="images/approach1.png" width="700" text-align="middle" />
 
 <br/>
 
@@ -32,9 +32,7 @@ DiagrammeR::grViz("approach1.gv", width = 336)
 
 ## Approche 2: avec R
 
-```{r, echo = FALSE}
-DiagrammeR::grViz("approach2.gv")
-```
+<p><img src="images/approach2.png" width="700" align="middle" /></p>
 
 <br/>
 
@@ -44,9 +42,9 @@ DiagrammeR::grViz("approach2.gv")
 
 ## Outils de captures d'écran
 <font size="10">
-Il faut un __webdriver__ et un __webdriver client__: PhantomJS via `webshot`, Selenium via `RSelenium`/`seleniumPipes`... le __paquet `webdriver`__ est l'interface du futur ! (https://github.com/rstudio/webdriver)
+Il faut un __webdriver__ ("explorateur") et un __webdriver client__ (qui sert d'interface pour le webdriver): PhantomJS via `webshot`, Selenium via `RSelenium`/`seleniumPipes`... le __paquet `webdriver`__ est l'interface du futur ! (https://github.com/rstudio/webdriver)
 
-`webshot` &co permettent l'**interaction** avec ou sans JavaScript.
+`webshot` ou autre permet l'**interaction** avec ou sans JavaScript.
 Pour bien viser une partie de l'écran, capture d'__éléments CSS__, ou alors __rognage et autres manipulations d'image via `magick`__ (https://github.com/ropensci/magick).
 
 </font>

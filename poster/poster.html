@@ -25,16 +25,15 @@
 <h1></h1>
 <div id="le-defi" class="section level2">
 <h2>Le défi</h2>
-<div id="htmlwidget-e72b5f6eeca8cf5a2479" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e72b5f6eeca8cf5a2479">{"x":{"diagram":"digraph {\n  rankdir=\"LR\"\n\n  // nodes\n  A [ label=\"Votre beau site\\n Votre fantastique app\" shape=\"hexagon\" fontsize = \"9\" fontname = \"Roboto\"]\n  B [ label=\"Les yeux de votre public\\n &#9786;&#9786;&#9786;&#9786;&#9786;&#9786;&#9786;\" fontsize = \"9\" fontname = \"Roboto\" shape = \"egg\"]\n\n  // edge\n  A -> B [ label = \"?\" fontsize = \"9\" fontname = \"Roboto\" style = \"dashed\"]\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-af3a36a641bfda54e6c9" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-af3a36a641bfda54e6c9">{"x":{"diagram":"digraph {\n  rankdir=\"LR\"\n\n  // nodes\n  A [ label=\"Votre beau site\\n Votre fantastique app\" shape=\"hexagon\" fontsize = \"9\" fontname = \"Roboto\"]\n  B [ label=\"Les yeux de votre public\\n &#9786;&#9786;&#9786;&#9786;&#9786;&#9786;&#9786;\" fontsize = \"9\" fontname = \"Roboto\" shape = \"egg\"]\n\n  // edge\n  A -> B [ label = \"?\" fontsize = \"9\" fontname = \"Roboto\" style = \"dashed\"]\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <div id="section-1" class="section level1 col-2">
 <h1></h1>
 <div id="approche-1-a-la-main" class="section level2">
 <h2>Approche 1: à la main</h2>
-<div id="htmlwidget-e86baed8913b8c80fbd3" style="width:336px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e86baed8913b8c80fbd3">{"x":{"diagram":"digraph {\n  rankdir=\"TB\"\n\n  // nodes\n  A [ label=\"Votre beau site\\n Votre fantastique app\" shape=\"hexagon\" fontsize = \"4\" fontname = \"Roboto\" height = \"0.3\" width = \"0.7\" fixedsize = \"true\"]\n  B [ label=\"Une image\" shape=\"egg\" fontsize = \"4\" fontname = \"Roboto\" height = \"0.2\" width = \"0.4\" fixedsize = \"true\"]\n  C [ label=\"Les diapos\" shape=\"egg\" fontsize = \"4\" fontname = \"Roboto\" height = \"0.2\"  width = \"0.5\" fixedsize = \"true\"]\n  D [ label=\"&#9786;&#9786;&#9786;&#9786;&#9786;&#9786;&#9786;\" fontsize = \"4\" fontname = \"Roboto\" shape = \"egg\" height = \"0.2\" width = \"0.5\" fixedsize = \"true\"]\n\n  // edges\n  A -> B [ label = \"Touche imprime-écran\\n Ou extension Chrome\\n Rognage à la main\" fontsize = \"4\" fontname = \"Roboto\" arrowsize=.5, weight=.2]\n  B -> C [ label = \"Copie-collagen &#9112;\" fontsize = \"4\" fontname = \"Roboto\"arrowsize=.5, weight=2.]\n  C -> D [ label = \"\" fontsize = \"4\" fontname = \"Roboto\"arrowsize=.5, weight=2.]\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<p><img src="images/approach1.png" width="700" text-align="middle" /></p>
 <p><br/></p>
 <p><font size="10"><i class="fas  fa-hand-scissors "></i> Et à chaque changement de l’outil… on recommence tout ! <i class="fas  fa-meh "></i></font></p>
 </div>
@@ -43,8 +42,9 @@
 <h1></h1>
 <div id="approche-2-avec-r" class="section level2">
 <h2>Approche 2: avec R</h2>
-<div id="htmlwidget-789077722df417337ac0" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-789077722df417337ac0">{"x":{"diagram":"approach2.gv","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<p>
+<img src="images/approach2.png" width="700" align="middle" />
+</p>
 <p><br/></p>
 <p><font size="10"><i class="fab  fa-r "></i> Et à chaque changement de l’outil… on re-tricote (“knit”) ! <i class="fas  fa-smile "></i></font></p>
 </div>
@@ -53,8 +53,8 @@
 <h1></h1>
 <div id="outils-de-captures-decran" class="section level2">
 <h2>Outils de captures d’écran</h2>
-<p><font size="10"> Il faut un <strong>webdriver</strong> et un <strong>webdriver client</strong>: PhantomJS via <code>webshot</code>, Selenium via <code>RSelenium</code>/<code>seleniumPipes</code>… le <strong>paquet <code>webdriver</code></strong> est l’interface du futur ! (<a href="https://github.com/rstudio/webdriver" class="uri">https://github.com/rstudio/webdriver</a>)</p>
-<p><code>webshot</code> &amp;co permettent l’<strong>interaction</strong> avec ou sans JavaScript. Pour bien viser une partie de l’écran, capture d’<strong>éléments CSS</strong>, ou alors <strong>rognage et autres manipulations d’image via <code>magick</code></strong> (<a href="https://github.com/ropensci/magick" class="uri">https://github.com/ropensci/magick</a>).</p>
+<p><font size="10"> Il faut un <strong>webdriver</strong> (“explorateur”) et un <strong>webdriver client</strong> (qui sert d’interface pour le webdriver): PhantomJS via <code>webshot</code>, Selenium via <code>RSelenium</code>/<code>seleniumPipes</code>… le <strong>paquet <code>webdriver</code></strong> est l’interface du futur ! (<a href="https://github.com/rstudio/webdriver" class="uri">https://github.com/rstudio/webdriver</a>)</p>
+<p><code>webshot</code> ou autre permet l’<strong>interaction</strong> avec ou sans JavaScript. Pour bien viser une partie de l’écran, capture d’<strong>éléments CSS</strong>, ou alors <strong>rognage et autres manipulations d’image via <code>magick</code></strong> (<a href="https://github.com/ropensci/magick" class="uri">https://github.com/ropensci/magick</a>).</p>
 <p></font></p>
 </div>
 <div id="conclusion" class="section level2">
@@ -67,7 +67,7 @@
 </div>
 <div id="meta-infos" class="section level2">
 <h2>Méta-infos</h2>
-<p><img src="poster_files/figure-html/unnamed-chunk-4-1.png" width="946" /></p>
+<p><img src="poster_files/figure-html/unnamed-chunk-3-1.png" width="946" /></p>
 <ul>
 <li><font size="10">Ce poster a été réalisé avec <code>R Markdown</code>, et <code>drposter</code> de Ben Bucior (<a href="https://github.com/bbucior/drposter" class="uri">https://github.com/bbucior/drposter</a>). </font></li>
 <li><font size="10">Icônes FontAwesome v5.0.13 fontawesome.com, importées avec le paquet <code>icon</code> (<a href="https://github.com/ropenscilabs/icon" class="uri">https://github.com/ropenscilabs/icon</a>).</font></li>
