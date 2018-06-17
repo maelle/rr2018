@@ -22,7 +22,7 @@ DiagrammeR::grViz("problem.gv")
 ```{r, echo = FALSE}
 source("make_gvs.R")
 ```
-<img src="images/approach1.png" width="700" text-align="middle" />
+<p style="text-align:middle;"><img src="images/approach1.png" width="700" /></p>
 
 <br/>
 
