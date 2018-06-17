@@ -1,7 +1,7 @@
 ---
 title: "Capturez votre écran depuis `r icon::fa('r')` !"
 subtitle: "Comment exposer votre outil ?"
-author: "Maëlle Salmon, rOpenSci"
+author: "Maëlle Salmon, rOpenSci <br/> `r icon::fa('twitter')` ma_salmon `r icon::fa('github')` maelle `r icon::fa('globe')` masalmon.eu"
 output:
   drposter::drposter_poster:
     self_contained: false
@@ -16,29 +16,37 @@ output:
 DiagrammeR::grViz("problem.gv")
 ```
 
-## Slide with Bullets
-
-- Bullet 1
-- Bullet 2
-- Bullet 3
-
 # {.col-2}
 
-## Slide with R Code and Output
+## Approche 1: à la main 
 
-```{r}
-summary(cars)
+```{r, echo = FALSE}
+DiagrammeR::grViz("approach1.gv")
 ```
 
-## Slide with Plot
 
-```{r, echo=FALSE}
-plot(cars)
-```
+<br/>
+
+<font size="10">`r icon::fa('hand-scissors')` Et à chaque changement de l'outil... on recommence tout ! `r icon::fa('meh')`</font>
+
+
+## Approche 2: avec R
+
+`r icon::fa('r')`
+
+BLABLA
 
 # {.col-1}
 
-## Conclusions
+## Outils de captures
 
-Take a look around the project example for a tour of useful column classes, etc.
+BLABLA
 
+## Conclusion
+
+- On peut tout faire avec R !
+- Oui il faut écrire du code mais ça a ses avantages: Reproducibilité, apprentissage de nouveaux outils (CSS, `magick`...).
+
+## Réferences
+
+* Ce poster a été réalisé avec `drposter` de Ben Bucior (https://github.com/bbucior/drposter). Les diagrammes sont faits en `GraphViz` utilisé via le paquet `DiagrammeR` de Richard Iannone (http://rich-iannone.github.io/DiagrammeR/).

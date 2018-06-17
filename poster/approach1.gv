@@ -1,0 +1,14 @@
+digraph {
+  rankdir="TB"
+
+  // nodes
+  A [ label="Votre beau site\n Votre fantastique app" shape="hexagon" fontsize = "4" fontname = "Roboto" height = "0.3" width = "0.7" fixedsize = "true"]
+  B [ label="Une image" shape="egg" fontsize = "4" fontname = "Roboto" height = "0.2" width = "0.4" fixedsize = "true"]
+  C [ label="Les diapos" shape="egg" fontsize = "4" fontname = "Roboto" height = "0.2"  width = "0.5" fixedsize = "true"]
+  D [ label="&#9786;&#9786;&#9786;&#9786;&#9786;&#9786;&#9786;" fontsize = "4" fontname = "Roboto" shape = "egg" height = "0.2" width = "0.5" fixedsize = "true"]
+
+  // edges
+  A -> B [ label = "Touche imprime-écran\n Ou extension Chrome\n Rognage à la main" fontsize = "4" fontname = "Roboto" arrowsize=.5, weight=.2]
+  B -> C [ label = "Copie-collage" fontsize = "4" fontname = "Roboto"arrowsize=.5, weight=2.]
+  C -> D [ label = "" fontsize = "4" fontname = "Roboto"arrowsize=.5, weight=2.]
+}
