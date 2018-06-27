@@ -285,7 +285,7 @@ magick_webshot_login("https://github.com/ropensci/onboarding/issues/new",
 
 # Pas de rejets mais...
 
-.font150[Paquets hors du domaine visé ne non accueillis.]
+.font150[Paquets hors du domaine visé non accueillis.]
 
 .font150[https://ropensci.github.io/dev_guide/policies.html]
 
