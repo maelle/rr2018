@@ -639,7 +639,7 @@ Impressions, exemples... approche plus générale ?]
 
 --
 
-* .font150[`tidytext` and `sentimentr`]
+* .font150[`tidytext` et `sentimentr`]
 
 * .font150[https://www.tidytextmining.com/ de Julia Silge et David Robinson]
 
@@ -771,7 +771,7 @@ thank(c("lmullen", "annakrystalli", "ropensci"))
 
 ---
 
-# Merci! 
+# Merci ! 
 ```{r, message = FALSE, out.width = 600, echo = FALSE}
 volunteers <- readr::read_csv("data/all_threads_v4.csv") %>%
   dplyr::filter(!author %in% c("maelle", "karthik",
