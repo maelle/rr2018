@@ -53,7 +53,7 @@ magick::image_blank(225, 200, col = "white") %>%
 
 * Membre de l'équipe de R Weekly
 
-* Éditrice volontaire pour rOpenSci
+* Éditrice bénévole pour rOpenSci
 
 ---
 
