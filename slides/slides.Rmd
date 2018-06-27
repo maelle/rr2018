@@ -1,0 +1,811 @@
+---
+title: "[Notre système de revue en revue!](https://ropensci.org/blog/2018/04/26/a-satrday-ct-series/)<br/> Présenter & analyser rOpenSci onboarding"
+subtitle: "Maëlle Salmon, éditrice pour rOpensci onboarding <br/> [`r icon::fa('twitter')`](https://twitter.com/ma_salmon) ma_salmon [`r icon::fa('github')`](https://github.com/maelle) maelle [`r icon::fa('globe')`](https://masalmon.eu) masalmon.eu"
+date: "2018/06/23"
+output:
+  xaringan::moon_reader:
+    css: ["default", "metropolis", "metropolis-fonts"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+
+knitr::opts_chunk$set(echo = TRUE, cache = TRUE,
+                      fig.align = 'center',
+                      fig.width = 15, message = FALSE,
+                      echo = FALSE)
+```
+
+
+
+```{r, echo=FALSE}
+library("magrittr")
+
+
+```
+
+# Ma place dans la communauté R
+
+```{r, echo = FALSE}
+
+row1 <- c(magick::image_read("assets/locke.png"),
+          magick::image_read("assets/rweekly.png")) %>%
+  magick::image_append()
+
+row2 <- c(magick::image_read("assets/ropensci.png"),
+          magick::image_read("assets/rladies.png")) %>%
+  magick::image_append()
+
+magick::image_blank(225, 200, col = "white") %>%
+  magick::image_composite(row1, offset = "+0+100") %>%
+  magick::image_composite(row2, offset = "+50+25") 
+```
+
+
+* Travail pour rOpenSci et Locke Data
+
+* _R-Ladies Global social master_
+
+* Membre de l'équipe de R Weekly
+
+* Éditrice volontaire pour rOpenSci
+
+---
+
+# Qu'est-ce rOpenSci ?
+
+--
+
+.font150[
+
+* Communautés de chercheurs et de développeurs de logiciels
+
+* Paquets R pour la science ouverte et reproductible
+
+* Contributions par le personnel et la communauté]
+
+
+---
+
+# Les paquets de rOpenSci
+
+https://ropensci.org/packages/
+
+--
+
+```{r, echo = FALSE}
+magick_webshot <- function(...){
+  webshot::webshot(...)
+  webshot <- magick::image_read("webshot.png")
+  file.remove("webshot.png")
+  webshot
+  
+}
+
+magick_webshot("https://ropensci.org/packages/", selector = ".filter",
+               expand = c(0, 10, 900, 10),
+               eval = "casper.then(function() {
+   this.click('.data-visualization');
+    this.wait(50);
+  });") %>%
+  magick::image_crop("992x500")
+
+```
+
+---
+
+# Les paquets de rOpenSci
+
+https://ropensci.org/packages/
+
+```{r, echo = FALSE}
+magick_webshot("https://ropensci.org/packages/", selector = ".filter",
+               expand = c(0, 10, 900, 10),
+               eval = "casper.then(function() {
+   this.click('.image-processing');
+    this.wait(50);
+  });") %>%
+  magick::image_crop("992x500")
+
+```
+
+---
+
+
+
+
+# Les paquets de rOpenSci
+
+https://ropensci.org/packages/
+
+```{r, echo = FALSE}
+magick_webshot("https://ropensci.org/packages/", selector = ".filter",
+               expand = c(0, 10, 900, 10),
+               eval = "casper.then(function() {
+   this.click('.taxonomy');
+    this.wait(50);
+  });") %>%
+  magick::image_crop("992x500")
+
+```
+---
+
+# rOpenSci onboarding !
+
+.font150[Comment assurer la qualité de tous les paquets ?]
+
+--
+
+.font150[Revues de logiciels ouvertes. _Onboarding_ = accueil et intégration.]
+
+--
+
+* .font150[Stimule l'adoption des meilleurs pratiques et standards.]
+
+--
+
+* .font150[Construit une communauté de pratique.]
+
+--
+
+* .font150[Partenariats avec le _Journal of Open Source Software_ et _Methods in Ecology and Evolution_]
+
+---
+
+
+# Passer quoi en revue ?
+
+--
+
+.font150[Jeff Leek https://github.com/jtleek/rpackages]
+
+```{r}
+magick::image_read("https://raw.github.com/jtleek/rpackages/master/documentation.png")
+```
+
+
+---
+
+# Critères de revue
+.font150[
+* Licence compatible avec l'_open-source initiative (OSI)_
+
+* Documentation complète
+
+* Haut taux de couverture de test
+
+* Code lisible
+
+* Usabilité]
+
+--
+
+.font150[https://ropensci.github.io/dev_guide/building.html]
+
+--
+
+.font150[Tout un livre ! https://ropensci.github.io/dev_guide]
+
+---
+
+
+# Comment faire la revue ?
+
+* .font150[Ouverte & non-accusatoire]
+
+--
+
+* .font150[Pas de rejet]
+
+--
+
+* .font150[Un processus constructif pour tous les acteurs]
+
+--
+
+* .font150[En pratique, utilisation de l'infrastructure de GitHub]
+
+---
+
+
+
+# rOpenSci onboarding 
+
+```{r, echo = FALSE}
+
+magick_webshot_login <- function(url, ...){
+  return_url <- stringr::str_replace(url, "github.com/",
+                                     "github.com/login?return_to=%2F")
+  load("pwd.RData")
+  eval <- paste0("casper.then(function() {
+    this.sendKeys('#login_field', 'chibimaelle');
+   this.sendKeys('#password', '",pwd,"');
+   this.click('.btn-block');
+    this.wait(50);
+  });")
+  magick_webshot(return_url, eval = eval, ...)
+}
+
+
+```
+
+```{r}
+magick_webshot_login("https://github.com/ropensci/onboarding",
+               selector = ".public", expand = c(0, 800, 500, 10))
+
+```
+
+---
+
+# Onglet de suivi des "problèmes"
+
+```{r}
+magick_webshot("https://github.com/ropensci/onboarding/issues",
+               selector = ".public", expand = c(0, 800, 500, 10))
+
+```
+
+---
+
+# Soumettre un paquet
+
+```{r}
+magick_webshot_login("https://github.com/AustralianAntarcticDivision/bowerbird",
+                       selector = ".public", expand = c(0, 800, 500, 10))
+
+```
+
+---
+
+# Soumettre un paquet
+
+```{r}
+magick_webshot("https://github.com/ropensci/onboarding/issues",
+               selector = ".public", expand = c(0, 800, 500, 10))
+
+```
+
+---
+
+
+# Soumettre un paquet
+
+```{r}
+magick_webshot_login("https://github.com/ropensci/onboarding/issues/new",
+               selector = ".public", expand = c(0, 800, 500, 10))
+
+```
+
+---
+
+# Pas de rejets mais...
+
+.font150[Paquets hors du domaine visé ne non accueillis.]
+
+.font150[https://ropensci.github.io/dev_guide/policies.html]
+
+--
+
+* .font150[nos catégories: accès à des données, extraction de données, accès à des formats de base de données, manipulation de données, dépôts de données,reproducibilité, données géospatialies, analyse de texte.]
+
+--
+
+* .font150[application _scientifique_]
+
+--
+
+* .font150[meilleur que les paquets similaires]
+
+--
+
+.font150[En cas de doute, demande de pré-soumission ! ]
+
+---
+
+
+
+# Demande de pré-soumission ?
+
+```{r}
+magick_webshot_login("https://github.com/ropensci/onboarding/issues/110",
+               selector = ".public", expand = c(0, 800, 500, 10))
+
+
+```
+
+---
+
+
+# Demande de pré-soumission ?
+
+```{r}
+magick_webshot_login("https://github.com/ropensci/onboarding/issues/129",
+               selector = ".public", expand = c(0, 800, 500, 10))
+
+
+```
+
+---
+
+# Procédé de revue
+
+```{r, out.width = 100}
+webshot::webshot("https://github.com/ropensci/onboarding/issues/139",
+               selector = "#show_issue")
+
+```
+
+---
+
+# Vérifications par l'éditeur·rice
+
+```{r, out.width = 350, echo = FALSE}
+magick_webshot("https://github.com/ropensci/onboarding/issues/139",
+               selector = ".js-comment-container:last-of-type")
+
+```
+---
+
+```{r, echo = FALSE}
+package_name <- "bowerbird"
+# airtable data
+airtable <- airtabler::airtable("appZIB8hgtvjoV99D", "Reviews")
+airtable <- airtable$Reviews$select_all()
+review_info <- dplyr::filter(airtable, package == package_name)
+
+# get the URLs
+issue_url <- dplyr::pull(review_info, onboarding_url) %>% unique()
+
+review_urls <- dplyr::pull(review_info, review_url)
+
+```
+
+
+
+
+```{r, echo = FALSE}
+review_urls <- stringr::str_split(review_urls, pattern = "#",
+                                  simplify = TRUE)
+
+```
+
+
+# Revues
+
+
+```{r, out.width = 100, echo = FALSE}
+magick_webshot(review_urls[1,1], selector = paste0("#", review_urls[1,2])) 
+
+```
+
+
+---
+
+# Revues
+
+
+```{r, out.width = 100, echo = FALSE}
+magick_webshot(review_urls[2,1], selector = paste0("#", review_urls[2,2])) 
+
+```
+
+
+---
+
+
+# Procédé de revue
+
+.font150[_Discussion_ jusqu'à acceptation et transfert du dépôt]
+
+--
+
+.font150[Souvent un article de blogue https://ropensci.org/tags/review/]
+
+---
+
+# Un portrait par les données ?
+
+.font150[Comment faire une _analyse de données_ de _rOpenSci onboarding_?]
+
+--
+
+.font150[Rectanglons _onboarding_! _[Rectangler, mot inventé par Jenny Bryan](https://speakerdeck.com/jennybc/data-rectangling)_]
+
+_Image par Allie Brosh_
+
+```{r}
+#  https://en.wikipedia.org/wiki/Hyperbole_and_a_Half
+
+magick::image_read("assets/rectangle.jpg") %>% magick::image_resize("300x300")
+
+```
+
+---
+
+
+# Données dans le suivi des problèmes
+
+```{r}
+magick_webshot("https://github.com/ropensci/onboarding/issues",
+               selector = ".public", expand = c(0, 800, 500, 10))
+
+```
+
+---
+
+
+# Tisser les fils de "problèmes" GitHub
+
+--
+
+.font150[GitHub GraphQL API v4. Mieux que v3? Obtenez seulement les données voulues.]
+
+--
+
+.font150[Mon expérience]
+
+--
+
+* .font150[Explorateur en ligne de l'API]
+
+* .font150[`ghql` https://github.com/ropensci/ghql]
+
+* .font150[jq play pour écrire des commandes jq pour dompter le JSON]
+
+* .font150[`jqr` https://github.com/ropensci/jqr]
+
+---
+
+# Résultat : fils de GitHub tissés
+
+.font150[Magie de GitHub V4 + un peu de domptage de données...]
+
+--
+
+```{r}
+fils <- readr::read_csv("data/clean_data.csv")
+
+fils 
+```
+
+---
+
+# Résultat : fils de GitHub tissés
+
+```{r}
+length(unique(fils$package))
+```
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+
+library("ggplot2")
+
+fils %>%
+  dplyr::group_by(package) %>%
+  dplyr::summarise(n = n()) %>%
+  ggplot(aes(n)) +
+  geom_histogram() +
+  hrbrthemes::theme_ipsum(base_size = 20,
+                          axis_title_size = 20) +
+  xlab("No. of comments by thread")
+```
+
+---
+
+# Données dans les dépôts accueillis
+
+--
+
+```{r}
+magick_webshot_login("https://github.com/AustralianAntarcticDivision/bowerbird/commits/master",
+                       selector = ".public", expand = c(0, 800, 500, 10))
+
+```
+
+---
+
+# Données dans les dépôts accueillis
+
+* .font150[Clone via `git2r` https://github.com/ropensci/git2r]
+
+--
+
+* .font150[Remise à leur état avant la soumission grâce à `git2r`. `git reset hard`... Machine à remonter le temps !]
+
+--
+
+* .font150[Obtension de l'historique des modifications via `gitsum`. https://github.com/lorenzwalthert/gitsum]
+
+--
+
+* .font150[Comptage des lignes de code via `cloc`. https://github.com/hrbrmstr/cloc]
+
+--
+
+* .font150[Comptage des fonctions et classes exportées par `devtools::parse_ns_file`]
+
+
+---
+
+# Regardons les données
+
+* .font150[Le code est dispo dans https://ropensci.org/blog/2018/04/26/a-satrday-ct-series/]
+
+* .font150[Paquets utilisés pour les visualisations : `ggplot2`, `hrbrthemes`, `viridis`.]
+
+
+---
+
+# Combien de travail représente _rOpenSci onboarding_ ?
+
+---
+
+# Travail dans les dépôts
+
+```{r, echo = FALSE}
+magick::image_read("assets/charlatan.png")
+```
+
+---
+
+# Âge à la soumission
+
+--
+
+```{r, echo = FALSE}
+magick::image_read("assets/apparent_age.png")
+```
+
+---
+
+# Temps de revue
+
+
+
+```{r, echo = FALSE}
+magick::image_read("assets/review_hours.png")
+```
+---
+
+
+# Quelle taille font les paquets ?
+
+.font150[Travail des auteurs
+
+Travails pour les réviseur·se·s]
+
+---
+
+
+```{r, echo = FALSE, eval = FALSE}
+magick::image_read("assets/loc.png")
+```
+
+# Temps de revue vs. nombre d'exports
+
+
+```{r, echo = FALSE}
+magick::image_read("assets/exports.png")
+```
+---
+
+
+# Notes sur la quantification du travail
+
+--
+
+* .font150[Difficile de définir des mesures.]
+
+--
+
+* .font150[Travail fait par des _volontaires_ !]
+
+--
+
+* .font150[Diminution du temps par automatisation.]
+
+--
+
+* .font150[Et les éditeur·rice·s alors ? Selon Tim Trice (traduit), _"anges guardiens du début à la fin du procédé d'accueil"_. Un paquet tous les un ou deux mois.]
+
+---
+
+# Procédé de qualité... et sympa ?
+
+--
+
+```{r}
+rtweet::tweet_shot("801761258097803264") %>%
+  magick::image_crop("517x300+0+90")
+```
+
+---
+
+
+# Météo sociale de _rOpenSci onboarding_
+
+.font150[Essai d'Ann Gentle dans http://open-advice.org/
+
+Impressions, exemples... approche plus générale ?]
+
+--
+
+.font150[Analyse de texte !]
+
+--
+
+* .font150[`tidytext` and `sentimentr`]
+
+* .font150[https://www.tidytextmining.com/ de Julia Silge et David Robinson]
+
+---
+
+# Mots les plus communs
+
+```{r, echo = FALSE}
+magick::image_read("assets/words.png")
+```
+
+
+---
+
+# Bigrammes les plus communs
+
+```{r, echo = FALSE}
+magick::image_read("assets/bigrams.png")
+```
+
+---
+
+# Corrélations par paire
+
+```{r, echo = FALSE}
+magick::image_read("assets/cor.png")
+```
+
+---
+
+# Sentiment
+
+--
+
+```{r, echo = FALSE}
+
+sentiments <- readr::read_csv("data/sentiment.csv")
+```
+
+```{r, echo = FALSE}
+magick::image_read("assets/sentiment.png")
+```
+
+---
+
+# Mots des lignes négatives
+
+```{r, echo = FALSE}
+magick::image_read("assets/negative.png")
+```
+
+---
+
+# Lignes les plus négatives
+
+```{r, echo = FALSE}
+sentiments %>%
+  dplyr::arrange(sentiment) %>%
+  dplyr::select(line, sentiment) %>%
+  head(n = 15)%>%
+  dplyr::mutate_if(is.character, stringr::str_squish) 
+```
+
+---
+
+
+# Lignes les plus positives !
+
+```{r, echo = FALSE}
+sentiments %>%
+  dplyr::arrange(- sentiment) %>%
+  dplyr::select(line, sentiment) %>%
+  head(n = 15) %>%
+  dplyr::mutate_if(is.character, stringr::str_squish) 
+
+```
+
+---
+
+# Engagez-vous, qu'il·elle·s disaient !
+.font150[
+`r icon::fa('twitter')` rOpenSci
+
+`r icon::fa('github')` Dépôt officiel https://github.com/ropensci/onboarding
+
+`r icon::fa('bookmark')` Blogue https://ropensci.org/tags/onboarding/ en particulier https://ropensci.org/blog/2018/04/26/a-satrday-ct-series/
+
+`r icon::fa('book')` Lisez notre livre https://ropensci.github.io/dev_guide/
+
+`r icon::fa('rocket')` Portez-vous volontaire pour être réviseu·r·se https://ropensci.org/onboarding/]
+
+---
+
+
+```{r, echo = FALSE, cache = FALSE}
+library("magrittr")
+```
+
+```{r, echo=FALSE}
+images_annotate <- function(images, texts, ...){
+  purrr::map2(images, texts, magick::image_annotate, ...) %>%
+    magick::image_join()
+}
+
+set.seed(42)
+thank <- function(names){
+  load("adjectives.RData")
+  compliments <- sample(adjectives, size = length(names))
+  glue::glue("https://github.com/{names}.png") %>%
+  magick::image_read() %>%
+  magick::image_resize("200x200") %>%
+  as.list() %>%
+  images_annotate(glue::glue("So {compliments}!"),
+                         boxcolor = "white",
+                         size = 15)%>%
+  magick::image_join() %>%
+  magick::image_append() 
+}
+```
+
+
+# Éditeur·rice·s
+
+```{r, out.width = 600, cache = TRUE, echo=TRUE}
+thank(c("karthik", "noamross", "sckott"))
+thank(c("lmullen", "annakrystalli", "ropensci"))
+```
+
+
+---
+
+# Merci! 
+```{r, message = FALSE, out.width = 600, echo = FALSE}
+volunteers <- readr::read_csv("data/all_threads_v4.csv") %>%
+  dplyr::filter(!author %in% c("maelle", "karthik",
+                             "noamross", "sckott",
+                             "lmullen", "annakrystalli")) %>%
+  dplyr::pull(author) %>%
+  unique() 
+volunteers <- c(volunteers, "ropensci", "ropenscilabs")
+  
+no_rows <- 14
+no_cols <- 16
+
+save_image <- function(user){
+  message(user)
+  glue::glue("https://github.com/{user}.png") %>%
+    magick::image_read() %>%
+    magick::image_resize("30x30") 
+}
+
+pics <- purrr::map(volunteers, save_image) %>%
+  magick::image_join()
+
+make_column <- function(i, pics, no_rows){
+  pics[(i*no_rows+1):((i+1)*no_rows)] %>%
+  magick::image_append(stack = TRUE) 
+}
+
+purrr::map(0:(no_cols-1), make_column, pics = pics, no_rows = no_rows) %>%
+  magick::image_join() %>%
+image_append(stack = FALSE)
+
+```
+
+<span style="display:block; margin-top:-22px;"><font size="5">[`r icon::fa('images')`](https://bit.do/cardiff18) bit.do/cardiff18 | [`r icon::fa('twitter')`](https://twitter.com/ma_salmon) ma_salmon | [`r icon::fa('github')`](https://github.com/maelle) maelle | [`r icon::fa('globe')`](https://masalmon.eu) masalmon.eu</font></span>
+
+
+---
