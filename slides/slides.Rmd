@@ -639,7 +639,7 @@ Impressions, exemples... approche plus générale ?]
 
 --
 
-* .font150[`tidytext` and `sentimentr`]
+* .font150[`tidytext` et `sentimentr`]
 
 * .font150[https://www.tidytextmining.com/ de Julia Silge et David Robinson]
 
