@@ -805,7 +805,7 @@ image_append(stack = FALSE)
 
 ```
 
-<span style="display:block; margin-top:-22px;"><font size="5">[`r icon::fa('images')`](https://bit.do/cardiff18) bit.do/cardiff18 | [`r icon::fa('twitter')`](https://twitter.com/ma_salmon) ma_salmon | [`r icon::fa('github')`](https://github.com/maelle) maelle | [`r icon::fa('globe')`](https://masalmon.eu) masalmon.eu</font></span>
+<span style="display:block; margin-top:-22px;"><font size="5">[`r icon::fa('images')`](http://bit.do/rr2018) bit.do/rr2018 | [`r icon::fa('twitter')`](https://twitter.com/ma_salmon) ma_salmon | [`r icon::fa('github')`](https://github.com/maelle) maelle | [`r icon::fa('globe')`](https://masalmon.eu) masalmon.eu</font></span>
 
 
 ---

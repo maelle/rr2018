@@ -15,3 +15,5 @@ This will be a poster about taking screenshots for slides using `webshot` and `m
 ## Notre système de revue de paquets en revue : présenter et analyser rOpenSci onboarding
 
 This will be a regular talk about rOpenSci onboarding and about analyzing git and GitHub data with R. Abstract: [Source](abstracts/git_github_regular.Rmd), [Pdf](abstracts/git_github_regular.pdf).
+
+[Slidedeck](https://maelle.github.io/rr2018/slides/slides#1)
