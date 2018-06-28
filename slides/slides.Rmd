@@ -63,7 +63,7 @@ magick::image_blank(225, 200, col = "white") %>%
 
 .font150[
 
-* Communautés de chercheurs et de développeurs de logiciels
+* Communautés de chercheur·se·s et de développeur·se·s de logiciels
 
 * Paquets R pour la science ouverte et reproductible
 
